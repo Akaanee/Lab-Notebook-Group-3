@@ -158,4 +158,101 @@
         \item If accepted, your changes will be merged into the main project.
     \end{itemize}
 \end{enumerate}
+\section{Lab Assignment 3: Git Branching, Merging, and Conflict Resolution}
+
+\textbf{Task:} Demonstrate proficiency in Git branching, merging, and conflict resolution in a step-by-step process.
+
+\subsection*{Procedure}
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Create a GitHub Repository:}
+    \begin{itemize}
+        \item Create a new repository called \texttt{git-advanced} on GitHub.
+    \end{itemize}
+    
+    \item \textbf{Clone the Repository:}
+    \begin{itemize}
+        \item Clone the repository to your local machine using the command: \texttt{git clone <repository-url>}
+    \end{itemize}
+    
+    \item \textbf{Create and Switch to a New Branch (feature-1):}
+    \begin{itemize}
+        \item Use the command \texttt{git checkout -b feature-1} to create and switch to a new branch named \texttt{feature-1}.
+    \end{itemize}
+    
+    \item \textbf{Add and Commit Changes on feature-1:}
+    \begin{itemize}
+        \item Create a file \texttt{shared.txt} and add the content:
+        \begin{verbatim}
+This is a shared file.
+Line 1: Original text.
+Line 2: Original text.
+        \end{verbatim}
+        \item Stage and commit the changes: \texttt{git commit -m "Add shared.txt with original text"}
+    \end{itemize}
+    
+    \item \textbf{Push the Branch to GitHub:} 
+    \begin{itemize}
+        \item Push the \texttt{feature-1} branch to GitHub: \texttt{git push origin feature-1}
+    \end{itemize}
+
+    \item \textbf{Create Another Branch (feature-2):}
+    \begin{itemize}
+        \item Switch to \texttt{feature-2} branch using the command: \texttt{git checkout -b feature-2}
+    \end{itemize}
+
+    \item \textbf{Modify the Shared File on feature-2:}
+    \begin{itemize}
+        \item Modify the second line of \texttt{shared.txt}:
+        \begin{verbatim}
+Line 2: Modified text in feature-2.
+        \end{verbatim}
+        \item Stage and commit the changes: \texttt{git add shared.txt}
+        \item Commit with a descriptive message: \texttt{git commit -m "Modify Line 2 in feature-2"}
+        \item Push the changes: \texttt{git push origin feature-2}
+    \end{itemize}
+
+    \item \textbf{Switch Back to feature-1 and Modify:}
+    \begin{itemize}
+        \item Switch back to \texttt{feature-1} using: \texttt{git checkout feature-1}
+        \item Modify the second line on \texttt{shared.txt}:
+        \begin{verbatim}
+Line 2: Modified text in feature-1.
+        \end{verbatim}
+        \item Stage and commit the changes: \texttt{git add shared.txt}
+        \item Commit with a descriptive message: \texttt{git commit -m "Modify Line 2 in feature-1"}
+        \item Push the changes: \texttt{git push origin feature-1}
+    \end{itemize}
+
+    \item \textbf{Merge feature-1 into main:}
+    \begin{itemize}
+        \item Switch to the \texttt{main} branch: \texttt{git checkout main}
+        \item Merge the \texttt{feature-1} branch into the \texttt{main} branch: \texttt{git merge feature-1}
+        \item Push the merged changes: \texttt{git push origin main}
+    \end{itemize}
+
+    \item \textbf{Merge feature-2 and Handle Conflict:}
+    \begin{itemize}
+        \item Merge \texttt{feature-2} into \texttt{main}: \texttt{git merge feature-2}
+        \item Git will notify you of a merge conflict in \texttt{shared.txt}.
+        \item Open \texttt{shared.txt} in your text editor and resolve the conflict by choosing the appropriate changes or combining them.
+        \item After resolving, stage the resolved file: \texttt{git add shared.txt}
+        \item Commit the merge: \texttt{git commit -m "Merge feature-2 into main and resolve conflicts"}
+        \item Push the resolved main branch to GitHub: \texttt{git push origin main}
+    \end{itemize}
+
+    \item \textbf{Clean Up Branches:}
+    \begin{itemize}
+        \item Delete both \texttt{feature-1} and \texttt{feature-2} branches locally:
+        \begin{verbatim}
+git branch -d feature-1
+git branch -d feature-2
+        \end{verbatim}
+        \item Delete the branches on GitHub:
+        \begin{verbatim}
+git push origin --delete feature-1
+git push origin --delete feature-2
+        \end{verbatim}
+    \end{itemize}
+\end{enumerate}
+\newpage
 \end{document}
