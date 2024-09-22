@@ -25,6 +25,9 @@ This repository contains the LaTeX source code for the Lab Notebook created by T
    - Detailed procedures for:
      - **Assignment 1:** Creating and publishing a C program for a calculator.
      - **Assignment 2:** Fixing a button issue in a mind reader application and creating a pull request.
+     - **Assignment 3:** Demonstrating Git branching, merging, and conflict resolution.
+     - **Assignment 4:** Creating a LaTeX document and uploading the source, PDF, and image files.
+     - **Assignment 5:** Creating a CV using LaTeX.
 
 ## How to Compile
 
